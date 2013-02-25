@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Website | Skyler's Geeden]]></title>
+  <link href="http://bluezod.github.com/blog/categories/website/atom.xml" rel="self"/>
+  <link href="http://bluezod.github.com/"/>
+  <updated>2013-02-25T14:59:51+13:00</updated>
+  <id>http://bluezod.github.com/</id>
+  <author>
+    <name><![CDATA[Skyler Lan]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Hello World!]]></title>
+    <link href="http://bluezod.github.com/blog/2013/02/24/hello-world/"/>
+    <updated>2013-02-24T20:47:00+13:00</updated>
+    <id>http://bluezod.github.com/blog/2013/02/24/hello-world</id>
+    <content type="html"><![CDATA[<p>  The first post today...
+<div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>[] [url] [link text] </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">&amp;lt;?php&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">&lt;pre&gt;&lt;code&gt;require_once &#39;/Users/bluezod/WorkBench/workspace/PHP/parcelpoint/app/Mage.php&#39;;</span>
+</span><span class='line'><span class="x">Mage::app();</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">$client = new Zend_Rest_Client();</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">$api_key=&#39;RG3456YHJ&#39;;</span>
+</span><span class='line'><span class="x">$api_secret_key=&#39;99sGVl705KuLb739D4TtZhkclE0=&#39;;</span>
+</span><span class='line'><span class="x">$timestamp=time();</span>
+</span><span class='line'><span class="x">//$string_to_sign=&quot;GET /agent/2000-13?timestamp=&quot;.$timestamp;</span>
+</span><span class='line'><span class="x">$string_to_sign=&#39;GET /parcel/1?timestamp=34234234234&#39;;</span>
+</span><span class='line'><span class="x">$request_signature=base64_encode(urlencode(hash_hmac(&#39;sha1&#39;, $string_to_sign, $api_secret_key)));</span>
+</span><span class='line'><span class="x">print_r( &#39;&amp;lt;pre&amp;gt;&#39;.$request_signature.&#39;&amp;lt;/pre&amp;gt;&#39;);</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">$client-&amp;gt;setUri(&quot;https://api.parcelpoint.com.au&quot;);</span>
+</span><span class='line'><span class="x">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">&lt;p&gt;//  $client-&gt;API_KEY($api_key);</span>
+</span><span class='line'><span class="x">//  $client-&gt;API_SECRET_KEY($api_secret_ksy);</span>
+</span><span class='line'><span class="x">//  $client-&gt;timestamp($timestamp);</span>
+</span><span class='line'><span class="x">//  $client-&gt;STRING_TO_SIGN($string_to_sign);</span>
+</span><span class='line'><span class="x">//  $client-&gt;REQUEST_SIGNATURE($request_signature);&lt;/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">&lt;pre&gt;&lt;code&gt;$client-&amp;gt;Authorization(&#39;PP:&#39;.$api_key.&#39;:&#39;.$request_signature);</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">$result = $client-&amp;gt;restGet(&quot;/api/v1/agent/2000-13&quot;);</span>
+</span><span class='line'><span class="x">print $result-&amp;gt;getBody();</span>
+</span><span class='line'><span class="x">&lt;/code&gt;&lt;/pre&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="x">&lt;p&gt;?&gt;</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+]]></content>
+  </entry>
+  
+</feed>
